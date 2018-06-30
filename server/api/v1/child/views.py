@@ -7,6 +7,7 @@ from api.v1.child.serializers import ChildSerializer, ParentSerializer
 class ChildViewSet(ModelViewSet):
     queryset = Child.objects.all()
     serializer_class = ChildSerializer
+    filter_fields = ['is_studying']
 
 
 class ParentViewSet(ModelViewSet):
