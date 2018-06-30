@@ -1,0 +1,9 @@
+.git/
+
+client/src/bower_components/
+client/src/node_modules/
+client/src/build/*
+
+local_settings.py
+*.pyc
+__pycache__
