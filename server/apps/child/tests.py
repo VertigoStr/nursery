@@ -1,7 +1,7 @@
 import base64
 
-from django.contrib.auth.models import User
 from django.test import TestCase
+from django.contrib.auth.models import User
 
 from mixer.backend.django import mixer
 
@@ -9,6 +9,12 @@ from apps.child.models import Parent, Child
 
 
 class ChildTest(TestCase):
+    """
+    Тесты для апи детей.
+    Проверяет:
+        1) создание детей, используя разный набор
+           корректных и некорректных входных данных
+    """
 
     def setUp(self):
         User.objects._create_user(username='jack', password='secret', email='jack@jack.com')

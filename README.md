@@ -35,4 +35,9 @@ uwsgi контейнер или проект целиком.
   * **ENABLE_DEBUG_TOOLBAR**
   * **PUDB_RDB_HOST**
   * **PUDB_RDB_PORT**
-  
+
+# Тесты
+```
+python server/manage.py test apps.child
+python server/manage.py test apps.journal
+```
