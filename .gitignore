@@ -87,3 +87,4 @@ Vagrantfile
 ubuntu-xenial-16.04-cloudimg-console.log
 .vagrant/
 docker/uwsgi/.uwsgi-reload
+server/db.sqlite3

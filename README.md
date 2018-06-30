@@ -1,4 +1,6 @@
 # Запуск
+
+## С докером:
 Убедитесь, что 80 и 35432 порты свободны и выполните `./scripts/up.sh`.
 
 В браузере откройте https://nursery.lvh.me. Если главная страница не открылась, то подождите минуту
@@ -6,8 +8,24 @@
 отправьте последние логи backend разработчику.
 
 Postgresql: доступен на порту 35432
-
 Swagger: https://nursery.lvh.me/api/
+
+## Без докера:
+Выполнить миграции:
+```
+python server/manage.py migrate --settings=core.settings.local
+```
+
+Создать суперпользователя:
+```
+python server/manage.py createsuperuser --settings=core.settings.local
+```
+
+Запустить проект:
+```
+python server/manage.py runserver --settings=core.settings.local
+```
+Swagger: https://127.0.0.1:8000/api/
 
 
 # Структура
