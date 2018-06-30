@@ -29,8 +29,10 @@ INSTALLED_APPS = [
 ] + [
     'django_extensions',
     'rest_framework',
+    'model_utils',
 ] + [
-    # add custom app's here
+    'apps.child',
+    'apps.journal',
 ]
 
 

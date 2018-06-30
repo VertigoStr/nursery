@@ -24,6 +24,7 @@ services:
     volumes:
       - static-nursery:/srv/project/static
       - media-nursery:/srv/project/media
+      - .:/srv/project/src:rw
     environment:
       - DJANGO_SETTINGS_MODULE=core.settings.dev
       - DISABLE_COLLECTSTATIC=1
