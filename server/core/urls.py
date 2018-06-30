@@ -17,6 +17,9 @@ if settings.DEBUG:
         path('', TemplateView.as_view(template_name='base.html'), name='base'),
     ]
 
+    from rest_framework_swagger.views import get_swagger_view
+    urlpatterns.append(path('api/', get_swagger_view('Nursery API')))
+
     if int(os.getenv('ENABLE_DEBUG_TOOLBAR', 0)):
         import debug_toolbar
 
