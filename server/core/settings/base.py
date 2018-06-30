@@ -29,6 +29,7 @@ INSTALLED_APPS = [
 ] + [
     'django_extensions',
     'rest_framework',
+    'rest_framework_swagger',
     'model_utils',
 ] + [
     'apps.child',
@@ -113,3 +114,11 @@ STATICFILES_DIRS = (
 
 MEDIA_ROOT = os.path.normpath(os.path.join(BASE_DIR, '../../media'))
 MEDIA_URL = '/media/'
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+    'PAGE_SIZE': 20
+}
